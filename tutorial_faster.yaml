@@ -1,0 +1,9 @@
+calls:
+    slurp: ma-throw slurp
+    pages_increment: ma-throw set BYTEBOOOK marker:capture* 2 + --service zerorpc-slurp-primitive-generic
+    pages_decrement: ma-throw set BYTEBOOOK marker:capture* 2 - --service zerorpc-slurp-primitive-generic
+
+bindings:
+    SPACE: slurp
+    LEFT: pages_decrement
+    RIGHT: pages_increment
