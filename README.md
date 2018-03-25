@@ -196,3 +196,56 @@ ma-deck --yaml tutorial_faster.yaml
 ```
 try pressing left, right and space!
 
+# Works-In-Progress (WIP)
+
+Now that we have a straightforward method for gathering material it would be useful to see the work-in-progress that is a accumulating.
+
+Used it its most basic way, [fold-ui](https://github.com/galencm/fold-lattice-ui) will check for new glworbs and show associated binaries.
+
+In another terminal open:
+```
+ma-ui-fold --size=1500x800
+```
+
+As the spacebar is pressed, zoomable thumbnails will appear.
+
+Now that material can accumulate, it is useful to consider what useful process(es) could look like involving the accumulation.
+
+Simple:
+    * repetitive
+    * mostly unchanging
+    * easy to define or modify with cli tools
+
+    At a basic level, accumulating material might need to be preprocessed in a simple and repetitive manner such as rotating an image from a device depending on device orientation. This might be device-dependent, but mostly unchangingly occur.
+
+    Configure devices as necessary.
+
+Intermediate:
+    * Configured per-structure
+    * generates data to be used by other processes
+    * graphical user interfaces may be more frictionless than cli tools for parts of definition/modification and visual feedback
+
+    In order to check that material is correctly sequenced or completely gathered it is useful to have various notations of the materials structures to check against. For example, the page numbers of a book or other sequenced material. The granularity could be increased by using chapters along with the table of contents for expected amounts. Additionally other groupings may need to be created for unenumerated parts such as covers.
+
+    One difficulty is that while structural features may be generally the same, specifics will vary from object to object. For example page numbers in the upper corners or lower corners. So a process that uses Optical Character Recogntion(OCR) on a rectangular region and stores the result may be not change, but the location of the rectangle will. However, this variation can also be useful for distinguishing groupings, roman numerals might identify an introductory session or chapter names appearing on the top center of the left page.
+
+    Roughly:
+    * Setup:
+        * A set of categories are defined with optional parameters such as expected amounts
+        * A region is defined
+        * A rule for what category to classify as depending on the region result is defined
+        * A pipe to crop and ocr the region is created
+    * Run for each new glworb:
+        * Crop region(s)
+        * OCR regions and store results
+        * Test rules on results and store rule results
+    * Finally:
+        * Combine results with category information
+        * Use to visualize, feedback or automate
+        * Warn of missing items or broken sequences
+
+    [Dss-ui](https://github.com/galencm/dss-ui) attempts to do this in a frictionless way along with creating xml that can be used by [qma-ui](https://github.com/galencm/qma-ui) and [fold-ui](https://github.com/galencm/fold-lattice-ui).
+
+Sophisticated:
+    * Remixes, reorganizes and records simple and intermediate components
+    * ???
