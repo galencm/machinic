@@ -1,0 +1,98 @@
+<machine>
+  <project/>
+  <session working_image="glworb:08a6fbf9-836c-4c8a-bae2-cf529552fbc4">
+    <thumb source_path="glworb:fe5c66d4-5c92-4e7d-b394-2a97cc5006fc"/>
+    <thumb source_path="glworb:e7d1cba6-4dfe-426b-a727-0d9ed57a5453"/>
+    <thumb source_path="glworb:08a6fbf9-836c-4c8a-bae2-cf529552fbc4"/>
+    <thumb source_path="glworb:5dd97e95-b928-4e91-8272-87b2fd25abad"/>
+    <thumb source_path="glworb:600db1a2-f44d-4cd6-89b2-9cefde8761f0"/>
+  </session>
+  <group name="lower_right_pagenum" color="#eabd82" width="1" height="1">
+    <region x="592" y="-2" x2="692" y2="98" width="100" height="100" source=""/>
+  </group>
+  <sequence name="lower_right_pagenum">
+    <step call="crop_to_key">
+      <argument description="x" value="592"/>
+      <argument description="y" value="-2"/>
+      <argument description="width" value="100"/>
+      <argument description="height" value="100"/>
+      <argument description="to key" value="lower_right_pagenum"/>
+    </step>
+  </sequence>
+  <group name="lower_left_pagenum" color="#fe8408" width="1" height="1">
+    <region x="92" y="-2" x2="192" y2="98" width="100" height="100" source=""/>
+  </group>
+  <sequence name="lower_left_pagenum">
+    <step call="crop_to_key">
+      <argument description="x" value="92"/>
+      <argument description="y" value="-2"/>
+      <argument description="width" value="100"/>
+      <argument description="height" value="100"/>
+      <argument description="to key" value="lower_left_pagenum"/>
+    </step>
+  </sequence>
+  <group name="lower_center-pagenum" color="#6092d8" width="1" height="1">
+    <region x="292" y="-2" x2="392" y2="98" width="100" height="100" source=""/>
+  </group>
+  <sequence name="lower_center-pagenum">
+    <step call="crop_to_key">
+      <argument description="x" value="292"/>
+      <argument description="y" value="-2"/>
+      <argument description="width" value="100"/>
+      <argument description="height" value="100"/>
+      <argument description="to key" value="lower_center-pagenum"/>
+    </step>
+  </sequence>
+  <rule source="lower_center-pagenum" destination="chapter" result="chapter_4">
+    <parameter symbol="between" values="20"/>
+    <parameter symbol="between" values="16"/>
+  </rule>
+  <rule source="lower_left_pagenum" destination="chapter" result="chapter_4">
+    <parameter symbol="between" values="20"/>
+    <parameter symbol="between" values="16"/>
+  </rule>
+  <rule source="lower_right_pagenum" destination="chapter" result="chapter_4">
+    <parameter symbol="between" values="20"/>
+    <parameter symbol="between" values="16"/>
+  </rule>
+  <rule source="lower_center-pagenum" destination="chapter" result="chapter_3">
+    <parameter symbol="between" values="15"/>
+    <parameter symbol="between" values="11"/>
+  </rule>
+  <rule source="lower_left_pagenum" destination="chapter" result="chapter_3">
+    <parameter symbol="between" values="15"/>
+    <parameter symbol="between" values="11"/>
+  </rule>
+  <rule source="lower_right_pagenum" destination="chapter" result="chapter_3">
+    <parameter symbol="between" values="15"/>
+    <parameter symbol="between" values="11"/>
+  </rule>
+  <rule source="lower_center-pagenum" destination="chapter" result="chapter_2">
+    <parameter symbol="between" values="10"/>
+    <parameter symbol="between" values="6"/>
+  </rule>
+  <rule source="lower_left_pagenum" destination="chapter" result="chapter_2">
+    <parameter symbol="between" values="10"/>
+    <parameter symbol="between" values="6"/>
+  </rule>
+  <rule source="lower_right_pagenum" destination="chapter" result="chapter_2">
+    <parameter symbol="between" values="10"/>
+    <parameter symbol="between" values="6"/>
+  </rule>
+  <rule source="lower_center-pagenum" destination="chapter" result="chapter_1">
+    <parameter symbol="between" values="5"/>
+    <parameter symbol="between" values="1"/>
+  </rule>
+  <rule source="lower_left_pagenum" destination="chapter" result="chapter_1">
+    <parameter symbol="between" values="5"/>
+    <parameter symbol="between" values="1"/>
+  </rule>
+  <rule source="lower_right_pagenum" destination="chapter" result="chapter_1">
+    <parameter symbol="between" values="5"/>
+    <parameter symbol="between" values="1"/>
+  </rule>
+  <category name="chapter_2" color="#1478a9" rough_amount="5" rough_amount_start="6" rough_amount_end="11" rough_order="1.0"/>
+  <category name="chapter_1" color="#1a42f9" rough_amount="5" rough_amount_start="1" rough_amount_end="6" rough_order="0.0"/>
+  <category name="chapter_4" color="#f7be2d" rough_amount="4" rough_amount_start="16" rough_amount_end="20" rough_order="3.0"/>
+  <category name="chapter_3" color="#5e8a2f" rough_amount="5" rough_amount_start="11" rough_amount_end="16" rough_order="2.0"/>
+</machine>
