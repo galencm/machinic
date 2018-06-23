@@ -99,7 +99,7 @@ cd machinic-image/generated
 ls
 ```
 
-An automatically generated diagram in the `generated` directory gives a sense of the generated permutations:
+`permutations.svg`, shows generated permutations and their relationships:
 ```
 $ display permutations.svg
 ```
