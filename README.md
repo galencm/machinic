@@ -104,7 +104,14 @@ ls
 $ display permutations.svg
 ```
 
-From the diagram(or grepping) we can see that there are gui versions (using kivy) for:
+The generic sources have to be started by script to be discoverable:
+```
+python3 slurp-term-cli-6.py run generic
+python3 slurp-term-cli-7.py run generic
+```
+These will slurp the left and right pages of the boook.
+
+We needa way to "turn" the pages. From the diagram(or grepping) we can see that there are button guis for:
 
 increment "pages" forwards
 ```
