@@ -1,3 +1,5 @@
+# to use with ma-deck:
+# ma-deck --yaml booklike_deck.yaml
 calls:
     slurp: ma-throw slurp
     slurp_with_preview: ma-throw slurp  | tr -d ",[]'"  | tr " " "\n" | ma-dm
