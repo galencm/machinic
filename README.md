@@ -153,7 +153,7 @@ So far the process, simple or sophisticated is:
 
 The process could be moved to hardware buttons, but for now a faster way using `ma-deck` to streamline the process before getting into the guis. We can create a yaml file that maps buttons to actions: 
 
-tutorial_faster.yaml:
+booklike_deck.yaml:
 ```
 calls:
     slurp: ma-throw slurp
@@ -172,7 +172,7 @@ bindings:
 and run with:
 
 ```
-ma-deck --yaml tutorial_faster.yaml
+ma-deck --yaml booklike_deck.yaml
 ```
 try pressing left, right and space!
 
