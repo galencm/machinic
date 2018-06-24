@@ -157,11 +157,14 @@ tutorial_faster.yaml:
 ```
 calls:
     slurp: ma-throw slurp
+    slurp_with_preview: ma-throw slurp  | tr -d ",[]'"  | tr " " "\n" | ma-dm
     pages_increment: ma-throw set BYTEBOOOK marker:capture* 2 + --service zerorpc-slurp-primitive-generic
     pages_decrement: ma-throw set BYTEBOOOK marker:capture* 2 - --service zerorpc-slurp-primitive-generic
 
 bindings:
     SPACE: slurp
+    DOWN: slurp
+    UP: slurp_with_preview
     LEFT: pages_decrement
     RIGHT: pages_increment
 ```
