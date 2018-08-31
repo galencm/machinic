@@ -1,45 +1,5 @@
 # Machinic
 
-## Tutorial for a simple scanner with machinic light
-
-Hardware used:
-
-* A computer
-  * dual monitors may be useful
-  * in examples most guis load at 1500x800 (modifiable)
-  * enough usb ports for 2 cameras and 2 wifi devices
-  * for the tutorial everything is assumed to be running on a single box
-* 2 cameras running chdk:
-  * chdk is not strictly needed, it is used to configure settings such as zoom, focus and many others
-  * gphoto2 is used to take photos
-  * camera amount is flexible depending on setup
-  * chdk can be installed in a variety of ways, useful to install it so that it loads automatically when camera is turned on
-* AP supporting wireless device (for machinic-tangle)
-  * machinic-tangle creates APs using `create_ap`, not all wifi devices work
-  * An Alfa AWUS036NHA works
-* Cheap/any wireless device
-  * used by machinic-tangle to scan for unconfigured things, any wifi device should work
-* A button Thing:
-  * as a software thing, could be a computer keypress (no esp82666 needed)
-  * as a hardware thing, spatially adjustable due to wifi and battery
-    * Adafruit Huzzah esp8266
-    * platformio config can be easily modified for other chips
-    * battery (lipo or rechargeable aa/aaa batteries with a step-up voltage regulator)
-    * hardware button to reset homie (plus a few resistors)
-    * hardware button to send message (plus a few resistors)
-    * ...all glommed together
-
-Overview:
-* install necessary packages and start db
-* configure devices with `enn-dev`
-* generate button thing code using `tangle-things`
-* connect button using `tangle-ui`
-* setup route so pressing button causes devices to slurp using `tangle-ui`
-* in realtime view slurped images in `fold-ui`
-* specify and ocr page numbers using `dzz-ui`
-* finally export sequenced images
-* dump system to xml with `ma-dump`
-
 ## Notes on some machinic packages
 
 * machinic
